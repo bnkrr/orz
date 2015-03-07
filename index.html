@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Orz : js animation of orz">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Orz</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/bnkrr/orz">View on GitHub</a>
-
-          <h1 id="project_title">Orz</h1>
-          <h2 id="project_tagline">js animation of orz</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/bnkrr/orz/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/bnkrr/orz/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>123</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Orz maintained by <a href="https://github.com/bnkrr">bnkrr</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+<head>
+<title>orz</title>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+  div {float:left; 
+       text-align: right;
+       font-size: 40px;
+       font-weight: bold;
+       font-family: Cursive;}
+  #o {
+    transform:rotate(70deg);
+    transform-origin:100% 50%;
     
+    -ms-transform: rotate(45deg); 		/* IE 9 */
+    -ms-transform-origin:100% 50%;		/* IE 9 */
 
-  </body>
+    -webkit-transform: rotate(45deg);	/* Safari 和 Chrome */
+    -webkit-transform-origin:100% 50%;	/* Safari 和 Chrome */
+
+    -moz-transform: rotate(45deg);		/* Firefox */
+    -moz-transform-origin:100% 50%;		/* Firefox */
+
+    -o-transform: rotate(45deg);		/* Opera */
+    -o-transform-origin:100% 50%;		/* Opera */
+
+  }
+</style>
+</head>
+
+<body>
+  <div id="o">or</div>
+  <div id="z">z</div>
+</body>
+
+  <script src="orz.js"></script>
 </html>
