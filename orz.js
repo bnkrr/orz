@@ -1,4 +1,4 @@
-
+// this is comment
 degree = 0;
 flag = 1;
 
