@@ -1,0 +1,36 @@
+.hex {
+    float: left;
+    margin-right: -26px;
+    margin-bottom: -50px;
+    background-img: url(http://a.hiphotos.baidu.com/image/pic/item/359b033b5bb5c9ea9dd8fa4ed639b6003af3b370.jpg);
+}
+.hex .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+    background-image: url(http://placekitten.com/200/305);
+}
+.hex .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #6C6;
+}
+.hex .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex.even {
+    margin-top: 53px;
+}
+
+/*
+*/
