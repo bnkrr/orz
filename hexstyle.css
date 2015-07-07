@@ -1,0 +1,44 @@
+ /*长宽比4:5*/
+ 
+.box0, .box60, .box120 {
+    width: 200px;
+    height: 250px; 
+    overflow: hidden;
+}
+.box60, .box120 {
+   visibility: hidden;
+}
+.box120 {
+    float: left;
+    margin-left: 10px;
+
+    transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+}
+.box60  {
+    transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+}
+.box0  {
+    background-image: url(1.jpg);
+    background: no-repeat 50% center;
+    background-size: 125% auto;
+    transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    visibility: visible;
+    background-color: #333333;
+}
+
+
+.hex-env  {
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+}

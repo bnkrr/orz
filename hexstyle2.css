@@ -1,0 +1,84 @@
+.hex {
+    float: left;
+    margin-right: -26px;
+    margin-bottom: -50px;
+}
+.hex .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid;
+    border-right-color: #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+    /*background-image: url(http://placekitten.com/200/305);*/
+}
+.hex .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: #6C6;
+}
+.hex .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid;
+    border-left-color: #6C6;
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+}
+.hex-row {
+    clear: left;  /*左侧不允许出现其他浮动物体（保证左边对齐）*/
+}
+
+.hex-env {
+    float: left;
+    height: 400px;
+    width: 500px;
+    overflow: hidden; /*当超出页面时隐藏(hidden)、滚动轴(scroll)*/
+}
+
+.hex.even {
+    margin-top: 53px;
+}
+
+/*
+背景图像遮罩效果
+快速选取效果
+
+
+用js计算hex-env所需的长宽然后使用overflow
+*/
+
+.picker {
+    float: left;
+    height: 200px;
+    width: 100px;
+}
+
+
+.picker .cover {
+    height: 48px;
+    width: 48px;
+    margin: 5px;
+}
+
+.picker .cell {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    left: 6px;
+    top: 6px;
+}
+
+
+.picker  .fn .cell {
+    background-color: #FF1111;
+}
+
+.picker .wn .cell {
+    background-color: #1111FF;
+}
+
+.menu {
+    /*clear: left;*/
+}
