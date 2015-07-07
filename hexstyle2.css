@@ -1,3 +1,8 @@
+.param_item {
+    float:left;
+    margin: 5px;
+}
+
 .hex {
     float: left;
     margin-right: -26px;
@@ -31,7 +36,7 @@
 }
 
 .hex-env {
-    float: left;
+    clear: left;
     height: 400px;
     width: 500px;
     overflow: hidden; /*当超出页面时隐藏(hidden)、滚动轴(scroll)*/
@@ -82,3 +87,9 @@
 .menu {
     /*clear: left;*/
 }
+
+.matrix {
+    float: left;
+}
+
+/*float布局问题*/

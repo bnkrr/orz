@@ -1,4 +1,12 @@
 
+function init() {
+    var row = $("input.row").val();
+    var col = $("input.col").val();
+    genMat(row, col);
+}
+
+function genMat(row,col) {}
+
 function matrixObjectInit(row, col) {
     var mat = new Object();
     mat.row = row;
