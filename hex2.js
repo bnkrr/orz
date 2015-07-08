@@ -36,7 +36,7 @@ function matrixObjectInit(row, col) {
     }
     
     mat.exportData = function () {
-        result = "battle_matrix2 =\n{\n{\n";
+        result = "battle_matrix* =\n{\n{\n";
         for (var i = 0; i < this.row; i++) {
             var line = "{ ";
             for (var j = 0; j < this.col; j++) {
@@ -57,24 +57,14 @@ function matrixObjectInit(row, col) {
 
 // onclick
 
-function OnClickHex() {
-    var abbr = $(".cell_selected").attr("abbr");
+function OnClickCell() {
+    var abbr = $(".type_selected").attr("abbr");
     var id = $(this).attr("id");
     
     mat.updateById(id, abbr);
-    cellfunc[abbr](id, abbr);
-}
-
-function restoreCellColor() {
-    $(".hex").children(".middle").css({
-        "background-color": "#AAAAAA",
-    });
-    $("#"+id).children(".left").css({
-        "background-color": "#AAAAAA",
-    });
-    $("#"+id).children(".right").css({
-        "background-color": "#AAAAAA",
-    });
+    $(this).removeClass();
+    $(this).addClass("cell "+abbr);
+    //cellfunc[abbr](id, abbr);
 }
 
 
@@ -95,7 +85,8 @@ cellfunc = {};
 cellfunc["fn"] = function (id, abbr) {
 
     $("#"+id).attr("abbr", abbr);
-    changeCellColor(id, cellColor[abbr]);
+    
+    //changeCellColor(id, cellColor[abbr]);
 
 }
 
@@ -107,21 +98,11 @@ cellfunc["wn"] = function (id, abbr) {
 }
 
 
-function OnClickPicker() {
+function OnClickType() {
     var abbr = $(this).attr("abbr");
-    $(".cell_selected").attr("abbr", abbr);
-    // $(".picker.cell").css({
-        // "border": "5px solid transparent",
-    // });
-    // $(this).css({
-        // "border": "5px solid black",
-    // });
-    
-}
-
-pickerfunc = function (abbr) {
-    $(".cell_selected").attr("abbr", abbr);
-
+    $(".type_selected").attr("abbr", abbr);
+    $(".type_cover").removeClass("type_cover_selected");
+    $(this).parent().addClass("type_cover_selected");
 }
 
 
@@ -141,8 +122,8 @@ cellColor = {
 }
 
 var mat = matrixObjectInit(4,4); // different from i, j
-$(".hex").click(OnClickHex);
-$(".cell").click(OnClickPicker);
+$(".cell").click(OnClickCell);
+$(".type").click(OnClickType);
 
 
 //循环所有元素

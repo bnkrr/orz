@@ -3,12 +3,29 @@
     margin: 5px;
 }
 
-.hex {
+
+
+.cell_row {
+    clear: left;  /*左侧不允许出现其他浮动物体（保证左边对齐）*/
+}
+
+.cell_env {
+    clear: left;
+    height: 400px;
+    width: 500px;
+    overflow: hidden; /*当超出页面时隐藏(hidden)、滚动轴(scroll)*/
+}
+
+.cell.even {
+    margin-top: 53px;
+}
+
+.cell {
     float: left;
     margin-right: -26px;
     margin-bottom: -50px;
 }
-.hex .left {
+.cell .left {
     float: left;
     width: 0;
     border-right: 30px solid;
@@ -17,13 +34,13 @@
     border-bottom: 52px solid transparent;
     /*background-image: url(http://placekitten.com/200/305);*/
 }
-.hex .middle {
+.cell .middle {
     float: left;
     width: 60px;
     height: 104px;
     background: #6C6;
 }
-.hex .right {
+.cell .right {
     float: left;
     width: 0;
     border-left: 30px solid;
@@ -31,25 +48,11 @@
     border-top: 52px solid transparent;
     border-bottom: 52px solid transparent;
 }
-.hex-row {
-    clear: left;  /*左侧不允许出现其他浮动物体（保证左边对齐）*/
-}
 
-.hex-env {
-    clear: left;
-    height: 400px;
-    width: 500px;
-    overflow: hidden; /*当超出页面时隐藏(hidden)、滚动轴(scroll)*/
-}
-
-.hex.even {
-    margin-top: 53px;
-}
 
 /*
-背景图像遮罩效果
-快速选取效果
 
+快速选取效果
 
 用js计算hex-env所需的长宽然后使用overflow
 */
@@ -61,13 +64,20 @@
 }
 
 
-.picker .cover {
+.picker .type_cover {
     height: 48px;
     width: 48px;
     margin: 5px;
+    
 }
 
-.picker .cell {
+.picker .type_cover_selected {
+    background-color: black;
+}
+
+
+
+.picker .type {
     height: 36px;
     width: 36px;
     position: relative;
@@ -76,11 +86,11 @@
 }
 
 
-.picker  .fn .cell {
+.picker  .type_fn {
     background-color: #FF1111;
 }
 
-.picker .wn .cell {
+.picker .type_wn {
     background-color: #1111FF;
 }
 
@@ -93,3 +103,15 @@
 }
 
 /*float布局问题*/
+
+
+
+/*以下是各类cell的格式样例*/
+
+.cell.fn .left, .cell.fn .middle, .cell.fn .middle,{
+    background-color: #FF1111;
+}
+
+.cell.wn {
+    background-color: #1111FF;
+}
